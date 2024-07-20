@@ -1,3 +1,15 @@
+//create three buttons
+const container = document.createElement("div");
+container.classList.add("container");
+document.body.appendChild(container);
+//creating Rock button
+const btnRock = document.createElement("button");
+btnRock.classList.add("btnRock");
+btnRock.textContent = "ROCK";
+btnRock.setAttribute("style", "color: red; width: 200px; height: 50px; border: 2px solid black; font-size: 30px;");
+container.appendChild(btnRock);
+
+
 let humanScore = 0, computerScore = 0;
 
 function getComputerChoice(){
@@ -41,21 +53,21 @@ function playRound(humanChoice, computerChoice){
 
 }
 
-function playGame(){
-    let rounNumber=1;
-    while(rounNumber<=5){
-        console.log(rounNumber);
-        const humanSelection = getHumanChoice();
-        const computerSelection = getComputerChoice();
-        playRound(humanSelection, computerSelection);
-        rounNumber++;
-    }
-}
+// function playGame(){
+//     let rounNumber=1;
+//     while(rounNumber<=5){
+//         console.log(rounNumber);
+//         const humanSelection = getHumanChoice();
+//         const computerSelection = getComputerChoice();
+//         playRound(humanSelection, computerSelection);
+//         rounNumber++;
+//     }
+// }
 
-playGame();
-if(humanScore>computerScore)
-    console.log("Congratulations you have won !");
-else if(humanScore<computerScore)
-    console.log("You LOST!");
-else
-console.log("The game ended with ~Tie!~");
+// playGame();
+// if(humanScore>computerScore)
+//     console.log("Congratulations you have won !");
+// else if(humanScore<computerScore)
+//     console.log("You LOST!");
+// else
+// console.log("The game ended with ~Tie!~");
